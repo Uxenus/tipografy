@@ -198,6 +198,9 @@ include_once "inc/inc.php";
             <!-- ================= ZAKRUGLENIE - START ================ -->
 
             <!-- /////////////////////////// AFTER PRINT ACTIONS ////////////////////// -->
+
+            <input type="button" value="Заказать">
+
         </form>
 
     </div>
