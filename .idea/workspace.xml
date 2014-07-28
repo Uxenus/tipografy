@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9bcbd797-551f-4c85-86e2-a75a1fe98f04" name="Default" comment="7">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    <list default="true" id="9bcbd797-551f-4c85-86e2-a75a1fe98f04" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vizitka.php" afterPath="$PROJECT_DIR$/vizitka.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -39,7 +38,7 @@
       <file leaf-file-name="vizitka.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vizitka.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="154" column="151" selection-start="6806" selection-end="6806" vertical-scroll-proportion="0.2547486" vertical-offset="2390" max-vertical-offset="3655">
+            <state line="194" column="44" selection-start="9026" selection-end="9026" vertical-scroll-proportion="0.63829786" vertical-offset="2728" max-vertical-offset="3621">
               <folding>
                 <element signature="e#6#86#0" expanded="true" />
                 <element signature="tag#head#0;tag#html#0" expanded="true" />
@@ -60,12 +59,14 @@
                 <element signature="tag#div#0;tag#div#5;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#select#0;tag#div#0;tag#div#5;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#6;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#7;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#div#0;tag#div#7;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+                <element signature="tag#select#0;tag#div#0;tag#div#7;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#8;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#0;tag#div#8;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#select#0;tag#div#0;tag#div#8;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#9;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
                 <element signature="tag#div#0;tag#div#9;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-                <element signature="tag#label#0;tag#div#0;tag#div#9;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -227,6 +228,11 @@
       <created>1404902702974</created>
       <updated>1404902702974</updated>
     </task>
+    <task id="LOCAL-00001" summary="7">
+      <created>1406553941986</created>
+      <updated>1406553941986</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -234,7 +240,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980973" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944915" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -242,7 +248,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28168264" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32944915" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -424,7 +430,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vizitka.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="154" column="151" selection-start="6806" selection-end="6806" vertical-scroll-proportion="0.2547486" vertical-offset="2390" max-vertical-offset="3655">
+        <state line="194" column="44" selection-start="9026" selection-end="9026" vertical-scroll-proportion="0.63829786" vertical-offset="2728" max-vertical-offset="3621">
           <folding>
             <element signature="e#6#86#0" expanded="true" />
             <element signature="tag#head#0;tag#html#0" expanded="true" />
@@ -445,12 +451,14 @@
             <element signature="tag#div#0;tag#div#5;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#select#0;tag#div#0;tag#div#5;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#6;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#7;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#div#0;tag#div#7;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
+            <element signature="tag#select#0;tag#div#0;tag#div#7;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#8;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#0;tag#div#8;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#select#0;tag#div#0;tag#div#8;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#9;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
             <element signature="tag#div#0;tag#div#9;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
-            <element signature="tag#label#0;tag#div#0;tag#div#9;tag#form#0;tag#div#0;tag#div#0;tag#body#0;tag#html#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -92,7 +92,7 @@ include_once "inc/inc.php";
             <!-- ================= LAMINAT - START ================ -->
             <div class="control-group ">
                 <input type="checkbox" value="on" id="laminat_status" name="laminat_status">
-                <label for="laminat"> Ламинация</label>
+                <label for="laminat_status"> Ламинация</label>
 
                 <div style="" id="laminatparam">
                     <select id="laminat" name="laminat" class="">
@@ -187,12 +187,10 @@ include_once "inc/inc.php";
             <!-- ================= ZAKRUGLENIE - START ================ -->
             <div class="control-group ">
                 <input type="checkbox" value="on" id="drilling_status" name="drilling_status">
-                <label for="drilling"> Сверление, ∅ 6мм</label>
+                <label for="drilling_status"> Сверление, ∅ 6мм</label>
 
                 <div id="drilling-info">
-                    <label for="drilling-info">
                         <strong>+ 0,5 грн.</strong> за 10 шт.
-                    </label>
                 </div>
             </div>
             <!-- ================= ZAKRUGLENIE - START ================ -->
