@@ -119,7 +119,7 @@ include_once "inc/inc.php";
             <!-- ================= BIGOVKA - START ================ -->
             <div class="control-group ">
                 <input type="checkbox" value="on" id="bigovka_status" name="bigovka_status">
-                <label for="bigovka">Биговка (канавка для сгиба):</label>
+                <label for="bigovka_status">Биговка (канавка для сгиба):</label>
 
                 <div class="hidden-options" id="bigparam">
                     <select id="bigovka" name="bigovka">
@@ -197,7 +197,7 @@ include_once "inc/inc.php";
 
             <!-- /////////////////////////// AFTER PRINT ACTIONS ////////////////////// -->
 
-            <input type="button" value="Заказать">
+            <input type="submit" value="Заказать" class="btn btn-success span3">
 
         </form>
 
