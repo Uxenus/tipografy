@@ -1,0 +1,81 @@
+#container {
+    padding: 10px;
+}
+
+.left-sidebar {
+    border: 1px solid #d9d9d9;
+    width: 500px;
+    padding: 10px;
+
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+}
+
+.control-group {
+    padding: 5px;
+    background-color: #e1edf7;
+}
+
+.radio_ch {
+    width: 18px !important;
+}
+
+
+/* /////////////////////////////// CUSTOMIZATION /////////////////////////// */
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    display:none;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+    font: 18px bold;
+    color: #444;
+    cursor: pointer;
+}
+
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::before {
+    content: "";
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    margin: 0 5px 0 0;
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+}
+
+input[type="checkbox"] + label::before {
+    background-position: -38px -260px;
+}
+
+input[type="radio"] + label::before {
+    background-position: 0px -279px;
+}
+
+input[type="checkbox"]:checked + label::before {
+    background-position: -114px -260px;
+}
+
+input[type="radio"]:checked + label::before {
+    background-position: -108px -279px;
+}
+
+input[type="checkbox"]:disabled + label::before {
+    background-position: -152px -260px;
+}
+
+input[type="checkbox"]:checked:disabled + label::before {
+    background-position: -171px -260px;
+}
+
+input[type="radio"]:disabled + label::before {
+    background-position: -144px -279px;
+}
+
+input[type="radio"]:checked:disabled + label::before {
+    background-position: -162px -279px;
+}​
