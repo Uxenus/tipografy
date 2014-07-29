@@ -1,10 +1,16 @@
+[class*="span"] {
+    float: left;
+    margin-left: 0px;
+    min-height: 1px;
+}
+
 #container {
-    padding: 10px;
+    padding: 5px;
 }
 
 .left-sidebar {
     border: 1px solid #d9d9d9;
-    width: 500px;
+    width: 99%;
     padding: 10px;
 
     -webkit-border-radius: 7px;
@@ -12,22 +18,63 @@
     border-radius: 7px;
 }
 
+@media (min-width: 1129px) {
+
+    .left-sidebar {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+
+}
+
 .control-group {
     padding: 5px;
     background-color: #e1edf7;
+}
+
+.after_print {
+    background-color: #D4E7A5;
+}
+
+.control-group:hover {
+    background-color: #f2dede;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5); /* Параметры тени */
+    -webkit-transition: 0.7s;-moz-transition: 0.7s;-ms-transition: 0.7s;-o-transition: 0.7s;transition: 0.7s;
+}
+
+.label_info {
+    color: green;
+}
+
+#main_setting {
+    margin-right: 10px;
+    /*width: 49%;*/
+    float: left;
+}
+
+#after_print_settings {
+    /*width: 49%;*/
+    float: left;
 }
 
 .radio_ch {
     width: 18px !important;
 }
 
+.hidden-options {
+    /*display: none;*/
+}
+
+h6 {
+    font-size: 14px;
+    color: #002a80;
+}
 
 /* /////////////////////////////// CUSTOMIZATION /////////////////////////// */
 
-
 input[type="checkbox"],
 input[type="radio"] {
-    display:none;
+    display: none;
 }
 
 input[type="checkbox"] + label,
@@ -78,4 +125,6 @@ input[type="radio"]:disabled + label::before {
 
 input[type="radio"]:checked:disabled + label::before {
     background-position: -162px -279px;
-}​
+}
+
+​

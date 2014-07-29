@@ -36,9 +36,8 @@ include_once "inc/inc.php";
 <body>
 
 <div id="container" class="shadow">
-    <?php
-    var_dump($_REQUEST);
-    ?>
+    <h5>Ваш заказ: Визитка (50х90мм)</h5>
+
 </div>
 </body>
 </html>
