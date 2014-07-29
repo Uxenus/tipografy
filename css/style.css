@@ -18,6 +18,16 @@
     border-radius: 7px;
 }
 
+#confirm_order {
+    width: 700px;
+    margin: 0 auto;
+    padding: 7px;
+    border: 1px solid #002a80;
+    border-radius: 10px;
+    background-color: #f7ecb5;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+}
+
 @media (min-width: 1129px) {
 
     .left-sidebar {
