@@ -31,10 +31,25 @@ include_once "inc/inc.php";
     <script type="text/javascript" src="js/app.js"></script>
 
     <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('.proc-options').prop('disabled', true);
+            $('input[type=checkbox]:checked').prop('checked', false);
+        });
+
         $(".control-group").live('hover', function () {
             $(".control-group").popover('hide');
             $(this).popover('toggle');
         });
+
+        function enable_disable_el(el) {
+
+            if ($(el).prop("disabled")) {
+                $(el).prop("disabled", false);
+            } else {
+                $(el).prop("disabled", true);
+            }
+        }
     </script>
 
 </head>
@@ -43,7 +58,7 @@ include_once "inc/inc.php";
 
 <div id="container" class="shadow">
 
-<h2>Визитка (50х90мм)</h2>
+<h2>ЗАКАЗ: Визитка (50х90мм) - ШАГ 1</h2>
 
 <br/>
 
@@ -54,7 +69,7 @@ include_once "inc/inc.php";
 
 <div class="left-sidebar span12">
 
-<form id="zakaz_vizitka" enctype="multipart/form-data" action="zakaz.php">
+<form id="zakaz_vizitka" enctype="multipart/form-data" action="zakaz.php" method="post">
 
 <!-- ================= NAME OF ZAKAZ - START ================ -->
 <div class="control-group span12"
@@ -67,7 +82,8 @@ include_once "inc/inc.php";
 
     <div class="controls">
         <input type="text" value="" name="name"
-               placeholder="Введите название заказа" class="span11" maxlength="150" required="true"
+               placeholder="Введите название заказа" class="span11" maxlength="150"
+               required="true"
                id="name">
     </div>
 </div>
@@ -78,13 +94,13 @@ include_once "inc/inc.php";
 
     <!-- ================= PRODUCT COUNT - START ================ -->
     <div class="control-group" data-toggle="popover"
-         data-content="Введите количество визиток которое вы хотите заказать... используйте только цифры! Минимальное количество 10шт."
+         data-content="Введите количество визиток которое вы хотите заказать... используйте только цифры! Минимальное количество 50шт."
          data-placement="top" data-original-title="ИНФОРМАЦИЯ!">
-        <label for="name" class="control-label"><h6>Количество визиток (шт.)</h6></label>
+        <label for="name" class="control-label"><h6>Количество (тираж) визиток (шт.)</h6></label>
 
         <div class="controls">
             <input type="number" min="50" step="50" maz="10000" value="" name="count"
-                   placeholder="Введите количество визиток (мин. 10шт.)" class="span5" maxlength="40"
+                   placeholder="Введите количество визиток (мин. 50шт.)" class="span5" maxlength="40"
                    required="true"
                    id="count">
         </div>
@@ -95,14 +111,15 @@ include_once "inc/inc.php";
     <div class="control-group" data-toggle="popover"
          data-content="Выберите тип бумаги для печати (плотность)."
          data-placement="top" data-original-title="ИНФОРМАЦИЯ!">
+        <span class="glyphicon glyphicon-exclamation-sign"></span>
         <label for="paper_type"><h6>Выберите тип бумаги для печати (плотность)</h6></label>
 
         <div id="paperparam">
-            <select id="paper_type" name="paper_type" class="span5">
+            <select id="paper_type" name="paper_type" class="span5 proc-option">
                 <option title="80 г/м2 офсет" value="ofs80">80 г/м2 офсет</option>
-                <option title="90 г/м2 офсет" value="mel90">90 г/м2 мел</option>
-                <option title="115 г/м2 офсет" value="mel115">115 г/м2 мел</option>
-                <option title="130 г/м2 офсет" value="mel130">130 г/м2 мел</option>
+                <option title="90 г/м2 мел" value="mel90">90 г/м2 мел</option>
+                <option title="115 г/м2 мел" value="mel115">115 г/м2 мел</option>
+                <option title="130 г/м2 мел" value="mel130">130 г/м2 мел</option>
                 <option title="150 г/м2 мел" value="mel150">150 г/м2 мел</option>
                 <option title="200 г/м2 мел" value="mel200">200 г/м2 мел</option>
                 <option title="250 г/м2 мел" value="mel250">250 г/м2 мел</option>
@@ -120,16 +137,17 @@ include_once "inc/inc.php";
          data-placement="top" data-original-title="ИНФОРМАЦИЯ!">
         <h6>Цветность печати:</h6>
 
-        <input class="radio_ch" type="radio" name="color_mode" id="color_4_0" value="half" checked="checked"> <label
-            for="color_4_0"
-            class="radio-inline"><span>односторонняя (4+0)</span></label>
-        <input class="radio_ch" type="radio" name="color_mode" id="color4_4" value="full"> <label
-            for="color4_4"
-            class="radio-inline"><span>двусторонняя (4+4)</span></label>
+        <input class="radio_ch" type="radio" name="color_mode" id="color_1side" value="half" checked="checked">
+        <label for="color_1side" class="radio-inline">
+            <span class="print-color">односторонняя (4+0)</span>
+        </label>
+        <input class="radio_ch" type="radio" name="color_mode" id="color_2sides" value="full">
+        <label for="color_2sides" class="radio-inline">
+            <span class="print-color">двусторонняя (4+4)</span>
+        </label>
 
     </div>
     <!-- ================= COLOR OF PRINT - END ================ -->
-
 
     <!-- ================= MAKET UPLOAD - START ================ -->
     <div class="control-group" data-toggle="popover"
@@ -167,11 +185,12 @@ include_once "inc/inc.php";
     <div class="control-group after_print" data-toggle="popover"
          data-content="Выберите тип ламинации после печати (покрытие плёнкой)."
          data-placement="top" data-original-title="ИНФОРМАЦИЯ!">
-        <input type="checkbox" value="on" id="laminat_status" name="laminat_status">
+        <input type="checkbox" value="on" id="laminat_status" name="laminat_status"
+               onclick="enable_disable_el('#laminat');">
         <label for="laminat_status"><span class="label_info">Ламинация</span></label>
 
         <div id="laminatparam">
-            <select id="laminat" name="laminat" class="" disabled>
+            <select id="laminat" name="laminat" class="proc-options">
                 <option title="1.00" value="g1_0">1+0 глянцевая УльтраБонд</option>
                 <option title="2.00" value="g1_1">1+1 глянцевая УльтраБонд</option>
                 <option title="1.25" value="m1_0">1+0 матовая УльтраБонд</option>
@@ -198,11 +217,11 @@ include_once "inc/inc.php";
     <div class="control-group after_print" data-toggle="popover"
          data-content="Введите название вашего заказа. Используйте понятные названия."
          data-placement="top" data-original-title="ИНФОРМАЦИЯ!">
-        <input type="checkbox" value="on" id="bigovka_status" name="bigovka_status">
+        <input type="checkbox" value="on" id="bigovka_status" name="bigovka_status" onclick="enable_disable_el('#bigovka');">
         <label for="bigovka_status"><span class="label_info">Биговка (канавка для сгиба):</span></label>
 
         <div class="hidden-options" id="bigparam">
-            <select id="bigovka" name="bigovka">
+            <select id="bigovka" name="bigovka" class="proc-options">
                 <option value="1">1 биг&nbsp; &nbsp;&nbsp; &mdash; 1.00 грн.</option>
                 <option value="2">2 бига&nbsp;&nbsp;&nbsp; &mdash; 2.00 грн.</option>
                 <option value="3">3 бига&nbsp;&nbsp;&nbsp; &mdash; 3.00 грн.</option>
@@ -230,11 +249,11 @@ include_once "inc/inc.php";
     <div class="control-group after_print" data-toggle="popover"
          data-content="Введите название вашего заказа. Используйте понятные названия."
          data-placement="top" data-original-title="ИНФОРМАЦИЯ!">
-        <input type="checkbox" value="on" id="perf_status" name="perf_status">
+        <input type="checkbox" value="on" id="perf_status" name="perf_status" onclick="enable_disable_el('#perforation');">
         <label for="perf_status"><span class="label_info">Перфорация:</span></label>
 
         <div class="hidden-options" id="perfp">
-            <select id="perforation" name="perforation">
+            <select id="perforation" name="perforation" class="proc-options">
                 <option value="1">1 проход&nbsp;&mdash; 1.00 грн.</option>
                 <option value="2">2 прохода &mdash; 2.00 грн.</option>
                 <option value="3">3 прохода &mdash; 3.00 грн.</option>
@@ -253,11 +272,11 @@ include_once "inc/inc.php";
     <div class="control-group after_print" data-toggle="popover"
          data-content="Минимальный формат порезки 50х45мм."
          data-placement="top" data-original-title="ИНФОРМАЦИЯ!">
-        <input type="checkbox" value="on" id="porezka_status" name="porezka_status">
+        <input type="checkbox" value="on" id="porezka_status" name="porezka_status" onclick="enable_disable_el('#cutting');">
         <label for="porezka_status"><span class="label_info">Дополнительный рез:</label>
 
         <div class="hidden-options" id="cuttings">
-            <select id="cutting" name="cutting">
+            <select id="cutting" name="cutting" class="proc-options">
                 <option value="1">1 рез&nbsp; &ndash; 0.20 грн.</option>
                 <option value="2">2 реза &ndash; 0.40 грн.</option>
                 <option value="3">3 реза &ndash; 0.60 грн.</option>
@@ -285,6 +304,8 @@ include_once "inc/inc.php";
 <!-- /////////////////////////// AFTER PRINT ACTIONS ////////////////////// -->
 
 <!-- /////////////////// AFTER PRINT SETTINGS - END //////////////// -->
+
+<input type="hidden" name="type" value="vizitka">
 
 <div class="clearfix span10">
     <input id="btn-zakaz" type="submit" value="Заказать" class="btn btn-success span3">

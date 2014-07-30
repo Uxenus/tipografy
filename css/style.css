@@ -19,13 +19,13 @@
 }
 
 #confirm_order {
-    width: 700px;
-    margin: 0 auto;
+    /*width: 700px;*/
+    /*margin: 0 auto;*/
     padding: 7px;
     border: 1px solid #002a80;
     border-radius: 10px;
     background-color: #f7ecb5;
-    box-shadow: 0 5px 5px rgba(0,0,0,0.5);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 @media (min-width: 1129px) {
@@ -43,17 +43,50 @@
 }
 
 .after_print {
+    font-weight: bold;
     background-color: #D4E7A5;
 }
 
 .control-group:hover {
     background-color: #f2dede;
-    box-shadow: 0 0 5px rgba(0,0,0,0.5); /* Параметры тени */
-    -webkit-transition: 0.7s;-moz-transition: 0.7s;-ms-transition: 0.7s;-o-transition: 0.7s;transition: 0.7s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Параметры тени */
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    -ms-transition: 0.7s;
+    -o-transition: 0.7s;
+    transition: 0.7s;
 }
 
 .label_info {
+    font-weight: bold;
     color: green;
+}
+
+.confirm-h2 {
+    color: green;
+}
+
+.confirm-h3 {
+    color: blue;
+}
+
+#after-print-values-container {
+    border: 1px solid #CCC;
+    padding: 2px;
+    background-color: #b2dba1;
+}
+
+.zakaz-punk-value {
+    color: #942a25;
+    font-weight: bold;
+}
+
+.zakaz-punk-title:before {
+    content: " - ";
+}
+
+#zakaz-detail {
+    margin-right: 15px;
 }
 
 #main_setting {
@@ -136,5 +169,3 @@ input[type="radio"]:disabled + label::before {
 input[type="radio"]:checked:disabled + label::before {
     background-position: -162px -279px;
 }
-
-​
