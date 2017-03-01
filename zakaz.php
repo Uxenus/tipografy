@@ -6,7 +6,6 @@
  * Time: 20:06
  */
 
-
 include_once "inc/inc.php";
 
 ?>
